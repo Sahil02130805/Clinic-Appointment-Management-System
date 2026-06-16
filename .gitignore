@@ -1,0 +1,22 @@
+# Virtual environments
+venv/
+.venv/
+Env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Databases
+*.db
+*.sqlite3
+
+# IDE / Editor folders
+.vscode/
+.idea/
+.DS_Store
+
+# Local secrets/environment
+.env
