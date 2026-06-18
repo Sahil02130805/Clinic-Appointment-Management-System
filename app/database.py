@@ -1,6 +1,11 @@
 import os
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
+
+# Load environment variables from .env file (for local development)
+# In production (Render, Railway, etc.), env vars are set directly — load_dotenv is a no-op there
+load_dotenv()
 
 # Fallback to local SQLite database if no environment variable is provided
 SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./clinic.db")
